@@ -39,7 +39,7 @@ app.get("/", (req, res) => {
 //  })
    
    mongodbconnect().then(()=>{
-       app.listen(PORT,()=>{
+       app.listen(process.env.PORT ||7001,()=>{
            console.log(`the server is running at the port number ${PORT}`)
        })
    })
