@@ -21,7 +21,7 @@ app.use(cors());
 app.use(express.json());
 
 // Set the view engine and serve static files
-app.set("view engine", "ejs");
+// app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 // Routes
