@@ -31,7 +31,7 @@ app.get("/", (req, res) => {
     res.render("index.ejs");
 });
 // static for production
-app.use(express.static(path.join(__dirname,"../sourav-protfolio-app/dist")))
+// app.use(express.static(path.join(__dirname,"../sourav-protfolio-app/dist")))
 // console.log(path.join(__dirname,"../client/dist"))
 // // index.html for production
 //  app.get("*",function(req,res){
