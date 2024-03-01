@@ -5,27 +5,27 @@ const nodemailer=require("nodemailer");
 
 
 
-const getdownload = (req, res) => {
-    const filePath = path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
-       console.log(__dirname)
-       console.log(filePath)
-    try {
-        res.download(filePath, 'sourav-cv', (err) => {
-            if (err) {
-                // Handle error, such as file not found
-                console.error('Error downloading file: ', err);
-                res.status(404).send('File not found');
-            }
-        });
-    } catch (error) {
-        console.log("error from download page", error);
-        // Depending on your application, you may want to handle this error differently,
-        // For example, you can send an internal server error response:
-        res.status(500).send('Internal Server Error');
-    }
+// const getdownload = (req, res) => {
+//     const filePath = path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
+//        console.log(__dirname)
+//        console.log(filePath)
+//     try {
+//         res.download(filePath, 'sourav-cv', (err) => {
+//             if (err) {
+//                 // Handle error, such as file not found
+//                 console.error('Error downloading file: ', err);
+//                 res.status(404).send('File not found');
+//             }
+//         });
+//     } catch (error) {
+//         console.log("error from download page", error);
+//         // Depending on your application, you may want to handle this error differently,
+//         // For example, you can send an internal server error response:
+//         res.status(500).send('Internal Server Error');
+//     }
 };
-const attachmentPath=path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
-      const Mailsend=(name,email,attachmentPath,msg)=>{
+// const attachmentPath=path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
+      const Mailsend=(name,email,msg)=>{
            try{
             const transpoter=nodemailer.createTransport({
                 host:'smtp.gmail.com',
@@ -43,10 +43,7 @@ const attachmentPath=path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
                   to:email,
                   subject:"THAKNKS FOR CONTACT WITH ME",
                   html:'<p>hii '+name+', thanks send me your valuable massege , i will contact with you very soon.Here is my Resume is attach if u want u must give me assign projects.HAVE A NICE DAY! </p>',
-                  attachments: [{
-                    path: attachmentPath,
-                    filename: 'SOURAV_CV.PDF',
-                }]
+               
                },function(error,info){
                 if(error){
                     console.log(error)
@@ -87,4 +84,4 @@ const attachmentPath=path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
     
 
 
-module.exports = { getdownload ,getcontact};
+module.exports = {  getcontact};
