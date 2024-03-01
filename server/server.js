@@ -32,11 +32,11 @@ app.get("/", (req, res) => {
 });
 // static for production
 app.use(express.static(path.join(__dirname,"../sourav-protfolio-app/dist")))
-console.log(path.join(__dirname,"../client/dist"))
-// index.html for production
- app.get("*",function(req,res){
-        res.sendFile(path.join(__dirname,"../sourav-protfolio-app/dist/index.html"))
- })
+// console.log(path.join(__dirname,"../client/dist"))
+// // index.html for production
+//  app.get("*",function(req,res){
+//         res.sendFile(path.join(__dirname,"../sourav-protfolio-app/dist/index.html"))
+//  })
    
    mongodbconnect().then(()=>{
        app.listen(PORT,()=>{
