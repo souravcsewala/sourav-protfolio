@@ -6,7 +6,7 @@ const protfoliorouter = require("./routes/protfolioroute");
 const path = require('path');
 const {mongodbconnect} =require("./database/protfoliodb")
 
-const PORT = 7001;
+const PORT =process.env.PORT ||7001;
 const app = express();
 const corsOptions = {
     origin: "http://localhost:8000",
