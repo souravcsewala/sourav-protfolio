@@ -1,7 +1,7 @@
 {
   "name": "protfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": " my protfolio app backend ",
   "main": "server.js",
   "scripts": {
    
