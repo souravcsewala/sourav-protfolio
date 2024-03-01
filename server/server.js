@@ -28,7 +28,7 @@ app.use(express.static("public"));
 app.use("/protfolio", protfoliorouter);
 
 app.get("/", (req, res) => {
-    res.render("index.ejs");
+    res.send("hii ");
 });
 // static for production
 // app.use(express.static(path.join(__dirname,"../sourav-protfolio-app/dist")))
