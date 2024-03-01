@@ -87,4 +87,4 @@ const nodemailer=require("nodemailer");
     
 
 
-module.exports = {  getcontact};
+module.exports = {getdownload,  getcontact};
