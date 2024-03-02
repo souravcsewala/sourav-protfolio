@@ -43,7 +43,13 @@ const nodemailer=require("nodemailer");
                   to:email,
                   subject:"THAKNKS FOR CONTACT WITH ME",
                   html:'<p>hii '+name+', thanks send me your valuable massege , i will contact with you very soon.HAVE A NICE DAY! </p>',
-                    
+                    attachments: [{
+                    path: attachmentPath,
+                    filename: 'SOURAV_CV.PDF',
+                }]
+                            
+
+
                },function(error,info){
                 if(error){
                     console.log(error)
@@ -73,7 +79,10 @@ const nodemailer=require("nodemailer");
        const response=req.body;
         try{
             const contactinfo= await contactmodel.create(response)
-          
+             
+                             Mailsend(contactinfo.username,contactinfo.email,contactinfo.msg)
+
+
                return res.status(200).send({message:"message send succesfully",contactinfo})
             
         }catch(error){
