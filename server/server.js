@@ -7,7 +7,7 @@ const { mongodbconnect } = require("./database/protfoliodb");
 const PORT = process.env.PORT || 7001;
 const app = express();
 const corsOptions = {
-    origin: "https://sourav-protfolio-userinterface.netlify.app/",
+    origin: "https://sourav-protfolio-userinterface.netlify.app",
     methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
     credentials: true,
 };
