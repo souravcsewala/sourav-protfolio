@@ -10,7 +10,7 @@ const nodemailer=require("nodemailer");
         console.log(__dirname)
        console.log(filePath)
    try {
-         res.download(filePath, 'sourav-cv', (err) => {
+         res.download(filePath, 'SOURAV CV.PDF', (err) => {
             if (err) {
                 // Handle error, such as file not found
                 console.error('Error downloading file: ', err);
