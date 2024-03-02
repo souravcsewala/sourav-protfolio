@@ -42,11 +42,8 @@ const nodemailer=require("nodemailer");
                   from:process.env.USERMAILID,
                   to:email,
                   subject:"THAKNKS FOR CONTACT WITH ME",
-                  html:'<p>hii '+name+', thanks send me your valuable massege , i will contact with you very soon.Here is my Resume is attach if u want u must give me assign projects.HAVE A NICE DAY! </p>',
-                     attachments: [{
-                    path: attachmentPath,
-                    filename: 'SOURAV_CV.PDF',
-                }]
+                  html:'<p>hii '+name+', thanks send me your valuable massege , i will contact with you very soon.HAVE A NICE DAY! </p>',
+                    
                },function(error,info){
                 if(error){
                     console.log(error)
