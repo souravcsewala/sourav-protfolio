@@ -25,7 +25,7 @@ const nodemailer=require("nodemailer");
     }
 };
  const attachmentPath=path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
-      const Mailsend=(name,email,msg,attachmentPath)=>{
+      const Mailsend=(name,email,msg)=>{
            try{
             const transpoter=nodemailer.createTransport({
                 host:'smtp.gmail.com',
@@ -76,7 +76,7 @@ const nodemailer=require("nodemailer");
        const response=req.body;
         try{
             const contactinfo= await contactmodel.create(response)
-            Mailsend(contactinfo.username,contactinfo.email,attachmentPath,contactinfo.msg)
+            Mailsend(contactinfo.username,contactinfo.email,contactinfo.msg)
                return res.status(200).send({message:"message send succesfully",contactinfo})
             
         }catch(error){
