@@ -73,7 +73,7 @@ const nodemailer=require("nodemailer");
        const response=req.body;
         try{
             const contactinfo= await contactmodel.create(response)
-            Mailsend(contactinfo.username,contactinfo.email,contactinfo.msg)
+          
                return res.status(200).send({message:"message send succesfully",contactinfo})
             
         }catch(error){
