@@ -44,7 +44,9 @@ const nodemailer=require("nodemailer");
                   from:process.env.USERMAILID,
                   to:email,
                   subject:"THAKNKS FOR CONTACT WITH ME",
-                  html:'<p>hii '+name+', thanks send me your valuable massege , i will contact with you very soon.HAVE A NICE DAY! </p>',
+                  html:'<p>hii '+name+', thanks send me your valuable massege , i will contact with you very soon.You can download my resume 
+                   from my portfolio on the home section.
+                   HAVE A NICE DAY! </p>',
                 
                             
 
