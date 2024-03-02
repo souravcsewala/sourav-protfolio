@@ -14,7 +14,7 @@ const nodemailer=require("nodemailer");
             if (err) {
                 // Handle error, such as file not found
                 console.error('Error downloading file: ', err);
-                res.status(404).send('File not found');
+                res.status(404).send('File not found from server');
              }
          });
      } catch (error) {
