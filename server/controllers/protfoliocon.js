@@ -8,9 +8,11 @@ const nodemailer=require("nodemailer");
  const getdownload = (req, res) => {
      const filePath = path.join(__dirname, '..', 'public', 'SOURAV CV.PDF');
         console.log(__dirname)
-       console.log(filePath)
+       console.log(filePath)  
+  // Use encodeURIComponent if the file path contains spaces or special characters
+         const encodedFilePath = encodeURIComponent(filePath);
    try {
-         res.download(filePath, 'SOURAV CV.PDF', (err) => {
+         res.download(encodedFilePath, 'SOURAV CV.PDF', (err) => {
             if (err) {
                 // Handle error, such as file not found
                 console.error('Error downloading file: ', err);
