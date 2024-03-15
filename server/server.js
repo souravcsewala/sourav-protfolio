@@ -24,7 +24,7 @@ app.use("/protfolio", protfoliorouter);
 
 app.get("/", (req, res) => {
     res.send("hii ");
-});
+}); 
 
 mongodbconnect().then(() => {
     app.listen(PORT, () => {
